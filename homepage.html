@@ -31,6 +31,16 @@
             <button class="upload_btn"><a href="/">give your best and upload a photo</a></button>
         </div>
 
+        <!-- Upload Section -->
+    <div class="upload_section">
+        <h2>Upload your photo</h2>
+        <form action="/your-upload-endpoint" method="POST" enctype="multipart/form-data">
+            <input type="file" id="photo-upload" name="photo" accept="image/*" class="file-input">
+            <button type="submit" class="upload_btn">Upload Photo</button>
+        </form>
+    </div>
+
+
     </div>
 </body>
 </html>

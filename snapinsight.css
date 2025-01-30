@@ -87,16 +87,19 @@ body {
 }
 
 .hero_container {
-    height: 100vh;
+    height: calc(100vh-120px);
     width: 100%;
-    padding: 250px;
     display: flex;
     justify-content: center;
     text-align: center;
     white-space: nowrap;
+    margin-top: 0px;
+    flex-direction: column;
+
 }
 
 .description_section h1 {
+    margin-top: 80px;
     font-family: 'Poppins';
     background-image: linear-gradient(to right, white 0%, #8C8E8C 100%);
     background-size: 100%;
@@ -108,6 +111,7 @@ body {
     -moz-text-fill-color: transparent;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -129,7 +133,6 @@ body {
     border-radius: 10px;
     color: white;
     margin-top: 2rem;
-    cursor: pointer;
     position: relative;
     transition: all 0.5s;
     outline: none;
@@ -142,22 +145,66 @@ body {
     text-decoration: none;
 }
 
-.upload_btn:after {
+.upload_btn:hover {
+    color: white;
+    background-color: #1D2424;
+}
+
+.upload_btn::after{
     position: absolute;
     content: '';
     top: 0;
     left: 0;
-    width: 0;
+    width: 100%;
     height: 100%;
     background: #1D2424;
-    transition: all 1s;
+    z-index: 1;
+    transform: scaleX(0); 
+    transition: transform 1s ease;
+}
+
+.upload_btn:hover::after {
+    transform: scaleX(1);
+}
+
+/* Upload Section */
+.upload_section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.upload_section h2 {
+    font-family: 'Poppins';
+    color: white;
+    margin-bottom: 20px;
+}
+
+.file-input {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1rem;
     border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.upload_btn {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: grey;
+    padding: 14px 32px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+    outline: none;
 }
 
 .upload_btn:hover {
     color: white;
-}
-
-.upload_btn:hover:after {
-    width: 100%;
+    background-color: #1D2424;
 }
