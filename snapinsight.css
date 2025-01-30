@@ -1,0 +1,24 @@
+body {
+    background-color: #1d2424;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+}
+
+.logo {
+    font-family: 'Poppins';
+    background-image: linear-gradient(to right, #4B8383 22%, #111D1D 100%);
+    background-size: 100%;
+    background-clip: text;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
