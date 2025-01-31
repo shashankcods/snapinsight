@@ -43,3 +43,6 @@ def deletePhoto(request, photo_id):
     print(f"Deleted photo ID {photo_id}")
 
     return redirect('results')
+
+def aboutPage(request):
+    return render(request, 'photoapp/aboutpage.html')
