@@ -7,8 +7,8 @@
     <title>SnapInsight</title>
     <link rel="stylesheet" href="snapinsight.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" type="text/css" href="{% static 'photoapp/css/snapinsight.css' %}"
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="{% static 'photoapp/css/snapinsight.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -30,7 +30,11 @@
         <div class="description_section">
             <h1>enhance your photography skills</h1>
             <h2>find out how your photo scores with an instant evaluation based on key photography factors.</h2>
-            <button class="upload_btn"><a href="/">give your best and upload a photo</a></button>
+            <button class="upload_btn" onclick="document.getElementById('file-upload').click();">
+                <a href="javascript:void(0);">give your best and upload a photo</a>
+            </button>
+            <!-- Hidden file input element for photo upload -->
+            <input type="file" id="file-upload" style="display:none;" accept="image/*" onchange="handleFileUpload(event)">
         </div>
 
         <!-- Upload Section -->
