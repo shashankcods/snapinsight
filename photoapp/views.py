@@ -25,7 +25,7 @@ def home(request):
     else:
         form = photoForm()
 
-    return render(request, 'photoapp/home.html', {'form': form, 'uploaded': uploaded})
+    return render(request, 'photoapp/homepage.html', {'form': form, 'uploaded': uploaded})
 
 def results(request):
     photos = Photo.objects.all()
