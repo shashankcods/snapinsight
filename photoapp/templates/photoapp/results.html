@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Analysis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .photo-container {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .bar-container {
+            width: 300px;
+            background-color: #ddd;
+            border-radius: 8px;
+            margin: 20px auto;
+            height: 20px;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 100%;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            line-height: 20px;
+            border-radius: 8px;
+        }
+
+        .delete-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .delete-btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Photo Analysis Results</h1>
+
+    {% for photo in photos %}
+    <div class="photo-container">
+        <h2>Photo {{ forloop.counter }}</h2>
+        <img src="{{ photo.image.url }}" alt="Uploaded Photo" width="300">
+
+        <div class="bar-container">
+            <div class="bar" style="width: {{ photo.overall_score|floatformat:0 }}%; background-color: {{ photo.bar_color }};">
+                {{ photo.overall_score|floatformat:0 }}%
+            </div>
+        </div>
+
+        <p>Overall Quality Score: {{ photo.overall_score|floatformat:0 }}%</p>
+
+        <!-- Delete Button -->
+        <form method="POST" action="{% url 'delete_photo' photo.id %}">
+            {% csrf_token %}
+            <button type="submit" class="delete-btn">Delete</button>
+        </form>
+    </div>
+    {% endfor %}
+</body>
+</html>
