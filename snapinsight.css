@@ -4,6 +4,7 @@ body {
     padding: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
 }
 
 #logo {
@@ -87,19 +88,18 @@ body {
 }
 
 .hero_container {
+    margin-top: 200px;
+    justify-content: center;
     height: calc(100vh-120px);
     width: 100%;
     display: flex;
-    justify-content: center;
     text-align: center;
     white-space: nowrap;
-    margin-top: 0px;
+    display: flex;
     flex-direction: column;
-
 }
 
 .description_section h1 {
-    margin-top: 80px;
     font-family: 'Poppins';
     background-image: linear-gradient(to right, white 0%, #8C8E8C 100%);
     background-size: 100%;
@@ -125,6 +125,7 @@ body {
 }
 
 .upload_btn {
+    margin-top: 1rem;
     font-family: 'Poppins';
     font-weight: bold;
     font-size: 1rem;
@@ -132,7 +133,6 @@ body {
     padding: 14px 32px;
     border-radius: 10px;
     color: white;
-    margin-top: 2rem;
     position: relative;
     transition: all 0.5s;
     outline: none;
@@ -165,46 +165,4 @@ body {
 
 .upload_btn:hover::after {
     transform: scaleX(1);
-}
-
-/* Upload Section */
-.upload_section {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.upload_section h2 {
-    font-family: 'Poppins';
-    color: white;
-    margin-bottom: 20px;
-}
-
-.file-input {
-    display: block;
-    margin: 0 auto;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    background-color: #f0f0f0;
-    cursor: pointer;
-}
-
-.upload_btn {
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: 1rem;
-    background-color: grey;
-    padding: 14px 32px;
-    border-radius: 10px;
-    color: white;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: all 0.5s;
-    outline: none;
-}
-
-.upload_btn:hover {
-    color: white;
-    background-color: #1D2424;
 }
