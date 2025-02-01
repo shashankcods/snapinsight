@@ -25,11 +25,11 @@ def home(request):
     else:
         form = photoForm()
 
-    return render(request, 'photoapp/homepage.html', {'form': form, 'uploaded': uploaded})
+    return render(request, 'homepage.html', {'form': form, 'uploaded': uploaded})
 
 def results(request):
     photos = Photo.objects.all()
-    return render(request, 'photoapp/results.html', {'photos':photos})
+    return render(request, 'results.html', {'photos':photos})
 
 def deletePhoto(request, photo_id):
     photo = get_object_or_404(Photo, id=photo_id)
@@ -52,5 +52,5 @@ def uploadPhoto(request):
     return render(request, "upload.html")
 
 def aboutPage(request):
-    return render(request, 'photoapp/aboutpage.html')
+    return render(request, 'aboutpage.html')
 
