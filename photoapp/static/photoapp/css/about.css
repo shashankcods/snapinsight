@@ -1,5 +1,5 @@
 body {
-    background-color: #243333;
+    background-color: #1d2424;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -92,83 +92,58 @@ body {
     transition: all 0.5s ease;
 }
 
-.hero_container {
-    margin-top: 200px;
-    justify-content: center;
-    height: calc(100vh-120px);
-    width: 100%;
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.aboutmain {
     display: flex;
-    text-align: center;
-    white-space: nowrap;
+    flex-direction: column; 
+    height: auto;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 10px;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-.description_section h1 {
-    font-family: 'Poppins';
-    background-image: linear-gradient(to right, white 0%, #8C8E8C 100%);
-    background-size: 100%;
-    background-clip: text;
-    font-weight: bold;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    text-decoration: none;
+    gap: 30px;
+    color: white;
+    padding: 0 20px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease-out;
+}
+
+.AboutHome {
+    background-color: #243333;
+}
+
+.Shashank {
+    background-color: #243333;
+}
+
+.Harish {
+    background-color: #243333;
+}
+
+.Shabbeer {
+    background-color: #243333;
+}
+
+.Sumit {
+    background-color: #243333;
+}
+
+h2 {
     font-size: 2rem;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
 }
-
-.description_section h2 {
-    font-family: 'Poppins';
-    color: grey;
-    margin-top: 0;
-}
-
-.upload_btn {
-    margin-top: 1rem;
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: 1rem;
-    background-color: grey;
-    padding: 14px 32px;
-    border-radius: 10px;
-    color: white;
-    position: relative;
-    transition: all 0.5s;
-    outline: none;
-}
-
-.upload_btn a {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-decoration: none;
-}
-
-.upload_btn:hover {
-    color: white;
-    background-color: #1D2424;
-}
-
-.upload_btn::after{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #1D2424;
-    z-index: 1;
-    transform: scaleX(0); 
-    transition: transform 1s ease;
-}
-
-.upload_btn:hover::after {
-    transform: scaleX(1);
-}
-
