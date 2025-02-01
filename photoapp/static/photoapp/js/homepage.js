@@ -8,7 +8,6 @@ function handleFileUpload(event) {
             const imagePreview = document.createElement('img');
             imagePreview.src = e.target.result;  // Set the image preview to the file's data URL
             imagePreview.alt = "Uploaded Image"; // Add an alt tag for accessibility
-            imagePreview.style.maxWidth = "200px"; // Optional: Set max width for preview
 
             // Display the uploaded image
             const previewContainer = document.querySelector('.image_preview');
