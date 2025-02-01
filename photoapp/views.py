@@ -44,5 +44,13 @@ def deletePhoto(request, photo_id):
 
     return redirect('results')
 
+def uploadPhoto(request):
+    if request.method == "POST" and request.FILES.get("photo"):
+        photo = Photo(image=request.FILES["photo"])
+        photo.save()
+
+    return render(request, "upload.html")
+
 def aboutPage(request):
     return render(request, 'photoapp/aboutpage.html')
+
