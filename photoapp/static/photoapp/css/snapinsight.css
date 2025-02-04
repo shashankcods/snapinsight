@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: #243333;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -200,8 +200,9 @@ body {
 }
 
 .data_container {
-    margin-top: 75px;
+    margin-top: 80px;
     padding: 10px;
+    margin-left: 90px;
 }
 
 .parameter {
@@ -211,11 +212,13 @@ body {
 label {
     font-size: 18px;
     font-weight: bold;
+    font-family: 'Poppins';
+    color: gray;
 }
 
 .scale_bar {
     position: relative;
-    width: 100%;
+    width: 375px;
     height: 20px;
     background-color: white;
     border-radius: 10px;
@@ -237,5 +240,7 @@ label {
     right: 10px;
     font-size: 14px;
     font-weight: bold;
+    font-family: 'Poppins';
+    color: gray;
 }
 
