@@ -1,5 +1,5 @@
 body {
-    background-color: #243333;
+    background-color: gray;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -200,7 +200,7 @@ body {
 }
 
 .data_container {
-    margin: 20px;
+    margin-top: 75px;
     padding: 10px;
 }
 

@@ -25,5 +25,18 @@ function handleFileUpload(event) {
         };
 
         reader.readAsDataURL(file); 
+
+        const formData = new FormData();
+        formData.append("image", file); 
+
+        fetch("/api/upload/", {  
+            method: "POST", 
+            body: formData, 
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch(error => console.error('Error:', error));
     }
 }
