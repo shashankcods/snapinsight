@@ -27,7 +27,7 @@ function handleFileUpload(event) {
         reader.readAsDataURL(file); 
 
         const formData = new FormData();
-        formData.append("image", file); 
+        formData.append("photo", file); 
 
         fetch("/api/upload/", {  
             method: "POST", 

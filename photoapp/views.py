@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.conf import settings
+from django.views.decorators import csrf
 from rest_framework.decorators import api_view, parser_classes
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser
@@ -52,9 +53,11 @@ def deletePhoto(request, photo_id):
     photo.delete()
     return Response({"message": f"Deleted photo {photo_id}"})
 
-@api_view(['GET'])
+def home(request):
+     return render(request, 'homepage.html')
+
 def aboutPage(request):
-    return Response({"message": "This is the About Page of SnapInsight"})
+    return render(request, 'aboutpage.html')
 
 def results(request):
     photos = Photo.objects.all()
