@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
 class Photo(models.Model):
     image = models.ImageField(upload_to='photos/')
     uploaded_at = models.DateTimeField(default=timezone.now)
