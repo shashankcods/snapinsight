@@ -131,19 +131,88 @@ body {
     background-color: #243333;
 }
 
-.Shashank {
+.Description {
     background-color: #243333;
 }
 
-.Harish {
+.Team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     background-color: #243333;
+    padding-top: 100px;
+}
+#Teamh2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 100px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+.team-members{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 170px;
+    margin-top:60px;
+}
+.team-member{
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
 }
 
-.Shabbeer {
-    background-color: #243333;
+.role {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: gray;
+    transition: transform 0.3s ease-in-out;
 }
 
-.Sumit {
+.social-box{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+.social-box a{
+    opacity: 0;
+    font-size: 0px;
+    color: white;
+    transition: opacity 0.3s, font-size 0.3s;
+    margin: 5px;
+}
+
+.team-member:hover .role{
+    transform: translateY(60px);
+}
+
+.team-member:hover .social-box{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.team-member:hover .social-box a{
+    opacity: 1;
+    font-size: 30px;
+}
+
+
+.End {
     background-color: #243333;
 }
 
