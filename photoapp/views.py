@@ -37,8 +37,11 @@ def uploadPhoto(request):
 
 @api_view(['GET'])
 def getPhotos(request):
-     photos = Photo.objects.all()
-     serializer = photoSerializer(photos, many=True)
+     photos = Photo.objects.order_by('-uploaded_at').first()
+     
+     if not photos:
+          return Response({"message": "No photos available"}, status=200)
+     serializer = photoSerializer(photos)
      return Response(serializer.data)
 
 @api_view(['DELETE'])
