@@ -93,7 +93,7 @@ body {
 }
 
 .hero_container {
-    margin-top: 200px;
+    margin-top: 175px;
     justify-content: center;
     height: calc(100vh-120px);
     width: 100%;
@@ -188,7 +188,7 @@ body {
     border: 2px outset #ccc;
     border-radius: 10px;
     margin-left: 50px;
-    margin-top: 75px;
+    margin-top: 90px;
     padding: 10px;
 }
 
@@ -200,7 +200,7 @@ body {
 }
 
 .data_container {
-    margin-top: 80px;
+    margin-top: 100px;
     padding: 10px;
     margin-left: 90px;
 }
@@ -213,7 +213,7 @@ label {
     font-size: 18px;
     font-weight: bold;
     font-family: 'Poppins';
-    color: gray;
+    color: #e0e0e0;
 }
 
 .scale_bar {
@@ -229,7 +229,7 @@ label {
     width: 0%;
     position: absolute;
     height: 100%;
-    background-color: #4caf50; 
+    background-color: #81c784; 
     border-radius: 10px;
 }
 
@@ -241,6 +241,6 @@ label {
     font-size: 14px;
     font-weight: bold;
     font-family: 'Poppins';
-    color: gray;
+    color: #243333;
 }
 
