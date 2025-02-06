@@ -85,11 +85,13 @@ body {
     background: grey;
     color: #1D2424;
     font-family: 'Poppins';
+    
+    /* Apply transition globally */
+    transition: background 0.5s ease-in;
 }
 
 .button:hover {
     background: white;
-    transition: all 0.5s ease;
 }
 
 .hero_container {
@@ -197,6 +199,7 @@ body {
     max-width: 100%; 
     max-height: 100%; 
     border-radius: 10px;
+    border: solid white;
 }
 
 .data_container {
@@ -223,6 +226,7 @@ label {
     background-color: white;
     border-radius: 10px;
     margin-top: 5px;
+    overflow: hidden;
 }
 
 .scale {
@@ -231,6 +235,7 @@ label {
     height: 100%;
     background-color: #81c784; 
     border-radius: 10px;
+    transition: width 1s ease-in-out;
 }
 
 .value {
@@ -242,5 +247,12 @@ label {
     font-weight: bold;
     font-family: 'Poppins';
     color: #243333;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
 }
+
+.scale_bar:hover .value {
+    opacity: 1;
+}
+
 
