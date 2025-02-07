@@ -3,12 +3,13 @@
 <a href="https://weekendofcode.computercodingclub.in/"> <img src="https://i.postimg.cc/njCM24kx/woc.jpg" height=30px> </a>
 
 ## Introduction:
-  **snapinsight** is a minimalistic web-based tool designed to help photographers enhance their composition and editing skills. Users can upload a photo, and the platform provides an instant evaluation based on key photography fundamentals such as exposure, contrast, highlights, shadows, and color balance. Each parameter is scored on a scale of 0-100, with a visual representation of strengths and areas for improvement. The project focuses on simplicity, usability, and an intuitive user experience, making it an accessible tool for photographers of all skill levels. 
+**snapinsight** is a minimalistic web-based tool designed to help photographers enhance their composition and editing skills. Users can upload a photo, and the platform provides an instant evaluation based on key photography fundamentals such as exposure, contrast, highlights, shadows, and color balance. Each parameter is scored on a scale of 0-100, with a visual representation of strengths and areas for improvement. The project focuses on simplicity, usability, and an intuitive user experience, making it an accessible tool for photographers of all skill levels. 
   
 ## Table of Contents:
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Future Improvements](#future-improvements)
   - [Technology Stack](#technology-stack)
   - [Contributors](#contributors)
 
@@ -41,6 +42,15 @@
 1. Upload a photo by clicking the **upload** button.
 2. Wait for the loading animation while the backend analyzes the photo.
 3. View the score for each photography parameter.
+
+## Future Improvements
+We plan to enhance the project with the following features:
+
+- **More Detailed Insights**: Provide deeper analysis of images, including composition, sharpness, and color theory evaluation.
+- **User History Page**: A dedicated page where users can view their past uploads and corresponding scores.
+- **Custom Machine Learning Model**: Instead of relying on predefined parameters, we aim to train our own ML model to analyze images and offer more accurate feedback.
+- **Mobile Optimization Enhancements**: Improve the mobile experience with a more responsive UI.
+- **User Authentication**: Implement user accounts to save progress and access past results anytime.
   
 
 ## Technology Stack:
