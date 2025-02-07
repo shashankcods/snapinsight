@@ -93,6 +93,7 @@ def analyze_image(image_path):
 
     # Compute scores based on differences from ideal values
     trait_scores = compute_trait_scores(current_values, ideal_values)
+    print(trait_scores)
 
     return trait_scores  # Returns a dictionary of scores
 

@@ -4,18 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnapInsight</title>
+    <title>snapinsight</title>
+
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" type="text/css" href="{% static 'photoapp/css/snapinsight.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- external css file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'photoapp/css/snapinsight.css' %}">
 </head>
 <body>
 
-    <!--NAVBAR-->
+    <!-- navbar section -->
     <nav class="navbar">
         <div class="navbar_container">
-            <a href="/" id="logo" class = "logo_navbar">snapinsight</a>
+            <a href="/" id="logo" class="logo_navbar">snapinsight</a>
             <ul class="navbar_menu">
                 <li class="navbar_btn">
                     <a href="/about" class="button">about</a>
@@ -24,25 +28,36 @@
         </div>
     </nav>
 
-    <!--HERO SECTION-->
+    <!-- hero section -->
     <div class="hero_container">
         <div class="description_section">
             <h1>enhance your photography skills</h1>
             <h2>find out how your photo scores with an instant evaluation based on key photography factors.</h2>
+            
+            <!-- upload button -->
             <button class="upload_btn" onclick="document.getElementById('file-upload').click();">
                 <a href="javascript:void(0);">give your best and upload a photo</a>
             </button>
+
+            <!-- hidden file input -->
             <input type="file" id="file-upload" style="display:none;" accept="image/*" onchange="handleFileUpload(event)">
         </div>
     </div>
 
-    <!--PREVIEW & DATA SECTION-->
+    <!-- preview and data section -->
     <div class="bottom_container">
-        <div class="image_preview">
-            <!-- Image preview -->
+        
+        <!-- image preview section -->
+        <div class="image_wrapper">
+            <div class="image_preview">
+                <!-- uploaded image shown here -->
+            </div>
+            <div class="loading_container">loading...</div>
         </div>
 
-        <div class="data_container" id = "data_container1">
+        <!-- first data container -->
+        <div class="data_container" id="data_container1">
+
             <div class="parameter">
                 <label for="param1">temperature</label>
                 <div class="scale_bar">
@@ -50,7 +65,7 @@
                     <span class="value" id="param1-value">0</span>
                 </div>
             </div>
-        
+
             <div class="parameter">
                 <label for="param3">exposure</label>
                 <div class="scale_bar">
@@ -76,7 +91,7 @@
             </div>
 
             <div class="parameter">
-                <label for="param5">vibrance</label>
+                <label for="param9">vibrance</label>
                 <div class="scale_bar">
                     <div class="scale" id="param9-scale"></div>
                     <span class="value" id="param9-value">0</span>
@@ -84,7 +99,9 @@
             </div>
         </div>
 
-        <div class="data_container" id = "data_container2">
+        <!-- second data container -->
+        <div class="data_container" id="data_container2">
+
             <div class="parameter">
                 <label for="param2">tint</label>
                 <div class="scale_bar">
@@ -125,9 +142,9 @@
                 </div>
             </div>
         </div>
-
     </div>
     
+    <!-- external javascript file -->
     <script src="{% static 'photoapp/js/homepage.js' %}"></script>
 </body>
 </html>

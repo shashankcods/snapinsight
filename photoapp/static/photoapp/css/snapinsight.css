@@ -1,3 +1,4 @@
+/* overall style */
 body {
     background-color: #243333;
     margin: 0;
@@ -7,6 +8,7 @@ body {
     flex-direction: column;
 }
 
+/* logo styling with gradient text */
 #logo {
     font-family: 'Poppins';
     background-image: linear-gradient(to right, #4B8383 22%, #111D1D 100%);
@@ -24,7 +26,7 @@ body {
     font-size: 1.5rem;
 }
 
-/*navbar*/
+/* navbar styling */
 .navbar {
     background: #1D2424;
     height: 120px;
@@ -39,7 +41,7 @@ body {
     border-bottom: 2px solid white;
 }
 
-.AboutHome .navbar{
+.AboutHome .navbar {
     position: sticky;
     top: 0;
 }
@@ -71,6 +73,7 @@ body {
     width: auto;
 }
 
+/* about button */
 .button {
     display: flex;
     justify-content: center;
@@ -85,15 +88,15 @@ body {
     background: grey;
     color: #1D2424;
     font-family: 'Poppins';
-    
-    /* Apply transition globally */
     transition: background 0.5s ease-in;
 }
 
+/* button hover effect */
 .button:hover {
     background: white;
 }
 
+/* hero section */
 .hero_container {
     margin-top: 175px;
     justify-content: center;
@@ -106,6 +109,7 @@ body {
     flex-direction: column;
 }
 
+/* heading1 gradient text */
 .description_section h1 {
     font-family: 'Poppins';
     background-image: linear-gradient(to right, white 0%, #8C8E8C 100%);
@@ -125,12 +129,14 @@ body {
     margin-bottom: 0;
 }
 
+/* subheading */
 .description_section h2 {
     font-family: 'Poppins';
     color: grey;
     margin-top: 0;
 }
 
+/* upload button styling */
 .upload_btn {
     margin-top: 1rem;
     font-family: 'Poppins';
@@ -145,6 +151,7 @@ body {
     outline: none;
 }
 
+/* upload button link */
 .upload_btn a {
     position: relative;
     z-index: 2;
@@ -152,12 +159,13 @@ body {
     text-decoration: none;
 }
 
+/* upload button hover effect */
 .upload_btn:hover {
     color: white;
     background-color: #1D2424;
 }
 
-.upload_btn::after{
+.upload_btn::after {
     position: absolute;
     content: '';
     top: 0;
@@ -166,7 +174,7 @@ body {
     height: 100%;
     background: #1D2424;
     z-index: 1;
-    transform: scaleX(0); 
+    transform: scaleX(0);
     transition: transform 1s ease;
 }
 
@@ -174,18 +182,20 @@ body {
     transform: scaleX(1);
 }
 
+/* bottom container for preview and data */
 .bottom_container {
     display: flex;
     justify-items: center;
 }
 
+/* image preview container */
 .image_preview {
-    width: 600px; 
-    height: 350px; 
+    width: 600px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
     border: 2px outset #ccc;
     border-radius: 10px;
@@ -194,20 +204,42 @@ body {
     padding: 10px;
 }
 
+/* image styling after upload*/
 .image_preview img {
-    object-fit: contain; 
-    max-width: 100%; 
-    max-height: 100%; 
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 10px;
     border: solid white;
 }
 
+/* loading animation */
+@keyframes fadePulse {
+    0% { opacity: 1; } 
+    50% { opacity: 0.25; } 
+    100% { opacity: 1; } 
+}
+
+/* loading text styling */
+.loading_container {
+    color: white;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 50px;
+    display: none;
+}
+
+/* data container for scores */
 .data_container {
     margin-top: 100px;
     padding: 10px;
     margin-left: 90px;
 }
 
+/* parameters */
 .parameter {
     margin-bottom: 15px;
 }
@@ -219,6 +251,7 @@ label {
     color: #e0e0e0;
 }
 
+/* bar styling */
 .scale_bar {
     position: relative;
     width: 375px;
@@ -229,15 +262,17 @@ label {
     overflow: hidden;
 }
 
+/* filling up scale bar */
 .scale {
     width: 0%;
     position: absolute;
     height: 100%;
-    background-color: #81c784; 
+    background-color: #81c784;
     border-radius: 10px;
     transition: width 1s ease-in-out;
 }
 
+/* value inside scale bar */
 .value {
     position: absolute;
     top: 50%;
@@ -251,8 +286,77 @@ label {
     transition: opacity 0.5s ease-in;
 }
 
+/* show value on hover */
 .scale_bar:hover .value {
     opacity: 1;
+}
+
+/* to fit website on phones (iPhone 12 Pro) */
+@media (max-width: 768px) {
+
+    .navbar {
+        background: #1D2424;
+        height: 200px;
+    }
+
+    .hero_container {
+        margin-top: 250px;
+        text-align: center;
+        white-space: nowrap;
+        flex-direction: column;
+    }
+
+    .description_section {
+        margin-left: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image_preview {
+        width: 350px;
+        height: 200px;
+        margin-left: -20px;
+        margin-top: 70px;
+        margin-bottom: -20px;
+    }
+
+    .loading_container {
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 0px;
+        display: none;
+    }
+
+    .description_section h1,
+    .description_section h2 {
+        white-space: normal;
+        text-align: center;
+    }
+
+    .bottom_container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    #data_container1, #data_container2 {
+        margin-right: 110px;
+    }
+
+    #data_container2 {
+        margin-top: -20px;
+    }
+
+    .scale_bar {
+        width: 350px;
+        height: 15px;
+    }
+
+    .upload_btn {
+        margin-right: 15px;
+    }
 }
 
 
