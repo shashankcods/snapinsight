@@ -19,15 +19,5 @@ class Photo(models.Model):
 
     overall_score = models.FloatField(null=True, blank=True)
 
-    def bar_color(self):
-        if self.overall_score is None:
-            return "gray"
-        if self.overall_score > 80:
-            return "green"
-        elif self.overall_score > 50:
-            return "orange"
-        return "red"
-
-
 def __str__(self):
     return f"Photo {self.id} - {self.uploaded_at}"
