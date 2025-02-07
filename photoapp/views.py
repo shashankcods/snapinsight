@@ -5,7 +5,7 @@ from rest_framework.decorators import api_view, parser_classes
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser
 from .models import Photo
-from .utils import analyze_image
+from .image_analysis import analyze_image
 from .serializers import photoSerializer
 import os
 
@@ -25,12 +25,30 @@ def uploadPhoto(request):
     photo.save()
     
     scores = analyze_image(photo.image.path)
+    print(f"Computed Scores: {scores}") 
+    
     if scores:
-        (photo.brightness_score, 
-         photo.contrast_score, 
-         photo.saturation_score, 
-         photo.sharpness_score, 
-         photo.overall_score) = scores
+        (photo.temperature_score, 
+        photo.tint_score, 
+        photo.exposure_score, 
+        photo.contrast_score, 
+        photo.highlights_score, 
+        photo.shadows_score, 
+        photo.whites_score, 
+        photo.blacks_score, 
+        photo.vibrance_score, 
+        photo.saturation_score) = (
+        scores["temperature"], 
+        scores["tint"], 
+        scores["exposure"], 
+        scores["contrast"], 
+        scores["highlights"], 
+        scores["shadows"], 
+        scores["whites"], 
+        scores["blacks"], 
+        scores["vibrance"], 
+        scores["saturation"])
+        
         photo.save()
     print(f"Photo uploaded successfully with ID: {photo.id}")  # Log success
     return Response({"message": "Upload successful!", "photo_id":photo.id})
