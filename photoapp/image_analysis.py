@@ -4,13 +4,12 @@ from PIL import Image
 import numpy as np
 import cv2
 
-
+device = "cuda" if torch.cuda.is_available() else "cpu"
+global_model, global_preprocess = clip.load("ViT-B/32", device)
 
 def classify_image(image_path):
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    model, preprocess = clip.load("ViT-B/32", device)
-    
-    image = preprocess(Image.open(image_path)).unsqueeze(0).to(device)
+    global global_model, global_preprocess
+    image = global_preprocess(Image.open(image_path)).unsqueeze(0).to(device)
     categories = [
         "daylight scene", "moonlit night", "indoor", "portrait", "sunset", 
         "underwater", "foggy", "landscape", "urban", "macro",
@@ -19,8 +18,8 @@ def classify_image(image_path):
     text_inputs = torch.cat([clip.tokenize(f"a photo of a {c}") for c in categories]).to(device)
     
     with torch.no_grad():
-        image_features = model.encode_image(image)
-        text_features = model.encode_text(text_inputs)
+        image_features = global_model.encode_image(image)
+        text_features = global_model.encode_text(text_inputs)
         similarity = (image_features @ text_features.T).softmax(dim=-1)
     
     category_idx = similarity.argmax().item()
