@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" type="text/css" href="{% static 'photoapp/css/about.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -23,20 +25,70 @@
     </header>
 
     <main class="aboutmain">
-        <!--HeroSection-->
+
+
+        <!-- Home About Page-->
         <div class="AboutHome section">
-            <h2>AboutUs</h2>
+            <div class="Home-content">
+                <div class="Home-details">
+                    <h2 class="title">snapinsight</h2>
+                    <h3 class="subtitle">enhance your photography skills!</h3>
+                    <p class="home-desc">unlock the true potential of your photos with snapinsight. Get AI-driven feedback to refine your shots, enhance your skills, and bring your vision to life—one frame at a time.</p>
+                    <p class="type-effect">get an insight on <span id="element"></span></p>
+                </div>
+
+                <!--Image for the Home page-->
+                <div class="image">
+                    <img src="/static/photoapp/images/Home-.svg" alt="Img" class="camera-image">
+                </div>
+
+            </div>
         </div>
+
+
+        <!--Description use Page-->
         <div class="Description section">
-            <h2>Description</h2>
+
+            <div class="Top">
+                <div class="box">
+                    <h2>What?</h2>
+                    <p class="What">Our website analyzes uploaded images and provides feedback on exposure, contrast, and other key photography parameters.</p>
+                </div>
+
+                <div class="box">
+                    <h2>Why?</h2>
+                    <p>It helps photographers improve their skills by offering AI-generated insights and enhancement suggestions.</p>
+                </div>
+            </div>
+
+
+            <div class="Bottom">
+                <div class="box">
+                    <h2>How?</h2>
+                    <p class="How">Developed using HTML, CSS, and JavaScript for the frontend, with Django and OpenAI's CLIP handling backend image processing.</p>
+                </div>
+
+                <div class="box">
+                    <div class="Repository-box">
+                        <a href="https://github.com/shashankcods/snapinsight" target="_blank">
+                            <h2>Github Repository</h2>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
         </div>
-        
+
+
+        <!--Team Page-->
         <div class="Team section">
             <h2 id="Teamh2">Our Team</h2>
             <div class="team-members">
                 <div class="team-member">
                     <h3>Shashank</h3>
-                    <p class="role">Frontend Developer</p>
+                    <p class="role">Frontend</p>
                     <div class="social-box">
                         <a href="https://github.com/shashankcods" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/shashank-lakkarsu-9b7062231/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -45,7 +97,7 @@
 
                 <div class="team-member">
                     <h3>Harish</h3>
-                    <p class="role">Backend Developer</p>
+                    <p class="role">Backend</p>
                     <div class="social-box">
                         <a href="https://github.com/kyrolxg" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/harish-raju-66a5882b6/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -54,7 +106,7 @@
 
                 <div class="team-member">
                     <h3>Shabbeer</h3>
-                    <p class="role">Frontend Developer</p>
+                    <p class="role">Frontend</p>
                     <div class="social-box">
                         <a href="https://github.com/Shabbeer2513" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/shabbeer-mohammed/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -63,18 +115,25 @@
 
                 <div class="team-member">
                     <h3>Sumit</h3>
-                    <p class="role">Backend Developer</p>
+                    <p class="role">Backend</p>
                     <div class="social-box">
                         <a href="https://github.com/sumit10866" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/sumit-surendran-379073270/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
+            
+        </div>
 
-        </div>
-        <div class="End section">
-            <h2>End</h2>
-        </div>
-    </main>    
+    </main>   
+    
+    <!--Typing Effect-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['temperature', 'tint', 'exposure', 'contrast', 'highlights', 'shawdows', 'whites', 'blacks', 'vibrance', 'saturation']
+        });
+      </script>
+
 </body>
 </html>
