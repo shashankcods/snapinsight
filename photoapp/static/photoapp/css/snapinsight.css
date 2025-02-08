@@ -199,7 +199,7 @@ body {
     position: relative;
     border: 2px outset #ccc;
     border-radius: 10px;
-    margin-left: 50px;
+    margin-left: 80px;
     margin-top: 90px;
     padding: 10px;
 }
@@ -236,7 +236,7 @@ body {
 .data_container {
     margin-top: 100px;
     padding: 10px;
-    margin-left: 90px;
+    margin-left: 70px;
 }
 
 /* parameters */
