@@ -344,7 +344,7 @@ h2 {
 
 
 /* for multiplatform feature */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     .Home-content{
         flex-direction: column;
         text-align: center;
