@@ -9,6 +9,7 @@
 ## Table of Contents:
   - [Features](#features)
   - [How Scores Are Derived](#how-scores-are-derived)
+  - [Folder Structure](#folder-structure)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Future Improvements](#future-improvements)
@@ -35,6 +36,16 @@ Our system uses **CLIP (Contrastive Language–Image Pretraining)** to analyze t
    - A **visual bar representation** displays these scores.
    
 This method ensures that feedback is adaptive, offering personalized suggestions for improvement based on the image type.
+
+## Folder Structure
+
+The main project files are inside the `photoapp` folder. Below is the structure:
+
+photoapp/
+│── templates/ # Contains all HTML files
+│── static/ # Holds static assets
+│ ├── css/ # CSS files for styling
+│ ├── js/ # JavaScript files 
 
 ## Installation
 1. Clone the repository:
