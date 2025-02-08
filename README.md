@@ -4,9 +4,11 @@
 
 ## Introduction:
 **snapinsight** is a minimalistic web-based tool designed to help photographers enhance their composition and editing skills. Users can upload a photo, and the platform provides an instant evaluation based on key photography fundamentals such as exposure, contrast, highlights, shadows, and color balance. Each parameter is scored on a scale of 0-100, with a visual representation of strengths and areas for improvement. The project focuses on simplicity, usability, and an intuitive user experience, making it an accessible tool for photographers of all skill levels. 
+
   
 ## Table of Contents:
   - [Features](#features)
+  - [How Scores Are Derived](#how-scores-are-derived)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Future Improvements](#future-improvements)
@@ -15,18 +17,30 @@
 
 
 ## Features
-- **Photo Upload**: Users can upload an image for analysis.
-- **Scoring System**: Provides scores (0-100) based on various photography parameters.
-- **Visual Feedback**: Display of scores using interactive progress bars.
-- **Minimalist UI**: Clean, user-friendly interface.
-- **Loading Animation**: Shows progress while the image is analyzed.
-- **Responsive Design**: Optimized for desktop and also can be used on mobile.
+- **Real-time Image Analysis**
+- **Score-Based Feedback System**
+- **Minimalistic, Aesthetic UI**
+- **Mobile-Friendly Design**
+
+## How Scores Are Derived
+Our system uses **CLIP (Contrastive Language–Image Pretraining)** to analyze the uploaded photo.
+1. **Image Classification with CLIP**: 
+   - The image is processed using CLIP, which identifies the closest matching photography category (e.g., "sunset," "portrait").
+2. **Fetching Ideal Parameter Values**:
+   - Predefined ideal values for each parameter (exposure, contrast, etc.) are retrieved based on the detected category.
+3. **Score Calculation**:
+   - The uploaded image's parameters are extracted.
+   - Each parameter is compared with the ideal values.
+   - A score (0-100) is assigned based on how close the image’s parameters are to the ideal values.
+   - A **visual bar representation** displays these scores.
+   
+This method ensures that feedback is adaptive, offering personalized suggestions for improvement based on the image type.
 
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/shashankcods/snapinsight.git
+   cd snapinsight
    ```
 2. Install dependencies:
    ```sh
@@ -52,13 +66,13 @@ We plan to enhance the project with the following features:
 - **Mobile Optimization Enhancements**: Improve the mobile experience with a more responsive UI.
 - **User Authentication**: Implement user accounts to save progress and access past results anytime.
   
-
 ## Technology Stack:
   1) HTML, CSS
   2) Vanilla JS
   3) Fetch API
   4) Django
-  5) Figma (for UI/UX design)
+  5) CLIP for image understanding
+  6) Figma (for UI/UX design)
   
 ## Contributors:
 
