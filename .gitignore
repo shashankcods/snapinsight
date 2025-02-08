@@ -11,3 +11,12 @@ db.sqlite3
 
 #Excluding media folder
 media/
+
+# ignore vscode settings
+.vscode/
+
+# ignore macOS system files
+.DS_Store
+
+# ignore .gitignore file itself
+!.gitignore
