@@ -41,11 +41,13 @@ This method ensures that feedback is adaptive, offering personalized suggestions
 
 The main project files are inside the `photoapp` folder. Below is the structure:
 
+```plaintext
 photoapp/
 │── templates/ # Contains all HTML files
 │── static/ # Holds static assets
 │ ├── css/ # CSS files for styling
-│ ├── js/ # JavaScript files 
+│ ├── js/ # JavaScript files
+```
 
 ## Installation
 1. Clone the repository:
